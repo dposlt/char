@@ -6,13 +6,24 @@ class GalNaLit {
  public static void main(String args[]) { //argumenty nepotrebujeme, ale stejne je musime psat, trapas
 
   double gallons, litres;
+  int limit, everyTen;
 
-  gallons = 50; //napr.
-
+  gallons = 1;
+  everyTen = 0; 
   litres = 3.7854; //tolik litru je v jednom galonu - super zit v americe kdyz za galon zaplatis skoro jako u nas za litr:)
-  System.out.print("In " + gallons + " gallons");
-  System.out.print(" Is " + gallons * litres + " litres");
-  System.out.println();
+
+  for(limit = 0; limit <= 99; limit++) {
+     System.out.println("In " + gallons + " gallons is a " + gallons * litres + " litres");
+     gallons++;
+     everyTen++;
+
+     if (everyTen == 10) {
+	 System.out.println(); 
+	 everyTen = 0;  
+     }
+
+  } 
+
 
   }
 
